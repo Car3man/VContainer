@@ -30,15 +30,15 @@ namespace VContainer.Unity
                 world.CreateSystemManaged<SimulationSystemGroup>();
                 world.CreateSystemManaged<PresentationSystemGroup>();
 
-                ScriptBehaviourUpdateOrder.RemoveWorldFromCurrentPlayerLoop(world);
-                ScriptBehaviourUpdateOrder.AppendWorldToCurrentPlayerLoop(world);
+                // ScriptBehaviourUpdateOrder.RemoveWorldFromCurrentPlayerLoop(world);
+                // ScriptBehaviourUpdateOrder.AppendWorldToCurrentPlayerLoop(world);
 #else
                 world.CreateSystem<InitializationSystemGroup>();
                 world.CreateSystem<SimulationSystemGroup>();
                 world.CreateSystem<PresentationSystemGroup>();
 
-                ScriptBehaviourUpdateOrder.RemoveWorldFromCurrentPlayerLoop(world);
-                ScriptBehaviourUpdateOrder.AddWorldToCurrentPlayerLoop(world);
+                // ScriptBehaviourUpdateOrder.RemoveWorldFromCurrentPlayerLoop(world);
+                // ScriptBehaviourUpdateOrder.AddWorldToCurrentPlayerLoop(world);
 #endif
             }
             return world;
