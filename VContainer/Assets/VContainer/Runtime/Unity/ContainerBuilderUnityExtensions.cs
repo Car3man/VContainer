@@ -240,7 +240,7 @@ namespace VContainer.Unity
             public SystemRegistrationBuilder Add<T>() where T : ComponentSystemBase
                 => containerBuilder.RegisterSystemIntoWorld<T>(worldName);
 #if UNITY_2022_2_OR_NEWER
-            public UnmanagedSystemRegistrationBuilder AddUnmanaged<T>(T system) where T : unmanaged, ISystem
+            public UnmanagedSystemRegistrationBuilder AddUnmanaged<T>() where T : unmanaged, ISystem
                 => containerBuilder.RegisterUnmanagedSystemIntoWorld<T>(worldName);
 #endif
         }
